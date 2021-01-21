@@ -1,0 +1,14 @@
+1) Write down your brief thoughts on how you approached the problem.
+
+For this problem I solved it by first extracting the data from the input file.
+My solution then generated an individual delivery matrix for each pizzeria in the city, and the solution can be found by taking the sum of these matrices.
+I found the individual delivery matrix by checking the distance from each of the locations inside a square of radius equal to the range of the pizzeria.
+This prevented the algorithm from checking every single square in the matrix.
+
+2) What is the complexity of your solution? Can it be improved?
+
+The time complexity of my solution is O(N) if N represents the number of locations, or O(N^2) if N represents the dimensions of the city.
+Whilst the worst case scenario cannot be improved as each index in the matrix will need to visited for every algorithm, for large ranges this algorithm still checks a large number of blank spaces.
+This means that in theory the algorithm could be improved. 
+A potential idea that I considered was checking squares from the centre outwards, however my method proved difficult to implement and often squares were checked twice.
+There is most likely a method that would work for this, only changing each square that needs to be changed and therefore reducing the complexity, for example a brute force method would work (although be spacially inefficent)

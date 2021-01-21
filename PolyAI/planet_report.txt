@@ -1,0 +1,13 @@
+1) Write down your brief thoughts on how you approached the problem.
+
+My immediate thoughts upon reading the problem were to use a pathfinding algorithm, although instead of finding the path with the minimum total weight I needed to find the path with the minumum maximum weight.
+After considering multiple algorithms I chose Dijkstra's over A* as it would be the easiest to manipulate in this fashion, and I didn't need to account for negative edge weights.
+My solution was to first extract the data from the input. I then created a fully connected graph for the points, with each edge weighting equal to the euclidean distance between the two nodes.
+I then performed a version of Dijkstra's algorithm to find the path with the minimum maximum weight along it, and output this maximum weight.
+
+2) What is the complexity of your solution? Can it be improved?
+
+The complexity of my solution is equivalent to the time complexity of Dijkstra's algorithm. 
+With the minimum priority queue implemented this is O(V+ElogV) where E is the total number of edges and V is the total number of nodes.
+I don't think that the time complexity can be improved using Dijkstra's algorithm, so to reduce time complexity a complex algorithm specific to this problem would need to be divised.
+There is also most likely a more efficient method of creating the the graph, as this has O(V^2).
